@@ -12,15 +12,15 @@ namespace ConsoleSend
 
             try
             {
-                var host = "";
-                var port = 25;
-
+                var host = "127.0.0.1";
+                var port = 35;
                 var box = new Mailbox(host, port);
 
                 var from = "ben@contoso.com";
                 var to = "tash@contoso.com";
-
-                var letter = new Letter(from, to);
+                var subject = "Some subject";
+                var body = "Some information";
+                var letter = new Letter(from, to, subject, body);
 
                 box.Send(letter);
                 Console.WriteLine("Письмо отправлено успешно");
